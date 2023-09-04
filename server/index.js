@@ -6,22 +6,14 @@ const { router } = require('./router/routes');
 const bodyParser = require('body-parser');
 const app=express();
 
-
-
 //  body parser for post method
 app.use(bodyParser.json({extended:true}));
 
 //
 app.use(express.urlencoded({extended:false}));
 // share data between backend and frontend servers
- 
-const corsOptions = {
-    origin: ['http://localhost:3000', 'https://localhost:5000'],
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, 
-    
-  };
-  app.use(cors(corsOptions));
+app.use(cors())  
+
 // database concetion
 connection();   
 
