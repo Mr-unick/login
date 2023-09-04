@@ -1,0 +1,8 @@
+<div> <label for="file-input">
+  <AddCircleIcon />
+    </label>
+    <input type='file' id='file-input'></input></div>
+    <input type='text' placeholder='type something...' id='textbox'></input>
+    <Button variant="contained" endIcon={<SendIcon />}>
+  Send
+</Button>

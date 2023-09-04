@@ -1,0 +1,33 @@
+#appbar {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(25 118 210);
+    color: rgb(250, 251, 252);
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+}
+
+li {
+    margin: 20px;
+}
+
+.avtar {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    top: 5px;
+}
+
+@media (max-width:800px) {
+    .avtar {
+        height: 25px;
+        width: 25px;
+        position: fixed;
+        right: 10px;
+        top: 7px;
+    }
+}

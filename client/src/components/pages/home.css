@@ -1,0 +1,308 @@
+.homepage {
+
+    width: 100%;
+    height: 550px;
+
+}
+
+.bannertext {
+    font-size: 70px;
+    margin: 0px;
+    color: rgba(241, 241, 237, 0.404);
+}
+
+.linetext {
+    color: rgb(241, 241, 237);
+}
+
+.banner2 {
+    margin-top: 40px;
+    width: 100%;
+    background-repeat: repeat-x;
+    height: 30%;
+    color: rgba(241, 241, 237, 0.459);
+}
+
+.box {
+    color: rgba(241, 241, 237, 0.514);
+    background-image: url('https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg');
+    background-repeat: repeat-x;
+    background-size: 500px 300px;
+    width: 100%;
+    height: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-direction: column;
+
+}
+
+h5 {
+    color: black;
+}
+
+#image {
+    margin-top: 110px;
+    height: 40%;
+    width: 35%;
+
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    height: 66%;
+
+}
+
+.tab {
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 3px;
+    border: 5px;
+}
+
+#btn {
+    width: 100%;
+    margin: 3px;
+    height: 110%;
+    margin-top: 20px;
+}
+
+
+.table {
+    justify-content: flex-start;
+    margin-left: 15px;
+
+}
+
+.modal {
+    background-color: blue;
+    height: 50vh;
+    width: 50wh;
+    margin: 100px;
+    margin-bottom: 200px;
+}
+
+.close {
+    display: none;
+}
+
+.bloggs {
+    display: flex;
+    height: 95%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-wrap: wrap;
+
+}
+
+
+
+.postimage {
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    height: 53%;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+}
+
+.timestamp {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 200%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.cardlogo {
+    border-radius: 50%;
+
+    height: 100%;
+    width: 30%;
+}
+
+.tittle {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.discription {
+    max-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.dis {
+    display: none;
+}
+
+.account {
+    display: flex;
+    flex-direction: row;
+    height: 7%;
+    width: 50%;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 10px;
+}
+
+.button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+
+}
+
+.card_exoand {
+    background-color: blue;
+}
+
+#dialogue {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+
+}
+
+.card {
+    display: flex;
+    width: 46%;
+    margin-top: 20px;
+    margin-left: 27px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-wrap: wrap;
+    min-height: 100%;
+    height: 200%;
+
+}
+
+#file-input {
+    display: none;
+}
+
+.imag {
+
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+
+}
+
+.createpost {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 500px;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    color: rgb(78, 77, 77);
+    margin-top: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+
+}
+
+
+#file {
+    font-size: 90px;
+}
+
+#textbox {
+    width: 500px;
+    border: none;
+
+}
+
+textarea {
+    border: none;
+    margin-right: 170px;
+}
+
+*:focus {
+    outline: none;
+}
+
+@media (max-width:800px) {
+    .homepage {
+        flex-wrap: wrap;
+
+    }
+
+
+    #image {
+        margin-top: 120px;
+        height: 50%;
+        width: 70%;
+    }
+
+    .bannertext {
+
+        font-size: 60px;
+    }
+
+    .banner2 {
+        display: flex;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+
+
+    .button {
+        margin-bottom: 22px;
+    }
+
+    #btn {
+
+        height: 30px;
+        width: 90px;
+        padding: 3px;
+        text-align: center;
+
+
+    }
+
+    .timestamp {
+        width: 400%;
+    }
+
+    .card {
+        height: 56%;
+        width: 90%;
+
+    }
+
+    .bloggs {
+        margin-top: 11px;
+        height: 610px;
+    }
+
+    .table {
+        margin-top: 15px;
+        overflow: hidden;
+        max-height: 100%;
+    }
+}

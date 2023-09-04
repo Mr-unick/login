@@ -1,0 +1,16 @@
+* {
+  text-decoration: none;
+
+}
+
+li {
+  color: aliceblue;
+}
+
+.App {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
