@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended:false}));
 // share data between backend and frontend servers
  
 const corsOptions = {
-    origin: 'http://localhost:3000', // Replace YOUR_CLIENT_PORT with the actual port of your client application
+    origin: 'http://localhost:5000', // Replace YOUR_CLIENT_PORT with the actual port of your client application
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, // Enable credentials (e.g., cookies, authorization headers)
   };
