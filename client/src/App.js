@@ -22,7 +22,7 @@ function App() {
     <div className="App">
     <BrowserRouter>
     <Routes>
-      <Route path='/login' element={<Login setauth={setauth}/>}/>
+      <Route path='login' element={<Login setauth={setauth}/>}/>
       <Route path='/' element={<Privateroute auth={auth}/>}>
       
       <Route path='/' element={<Home/>}/>
