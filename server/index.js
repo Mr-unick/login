@@ -6,14 +6,21 @@ const { router } = require('./router/routes');
 const bodyParser = require('body-parser');
 const app=express();
 
+
+
 //  body parser for post method
 app.use(bodyParser.json({extended:true}));
 
 //
 app.use(express.urlencoded({extended:false}));
 // share data between backend and frontend servers
-app.use(cors())  
-
+ 
+const corsOptions = {
+    origin: 'http://localhost:YOUR_CLIENT_PORT', // Replace YOUR_CLIENT_PORT with the actual port of your client application
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // Enable credentials (e.g., cookies, authorization headers)
+  };
+  app.use(cors(corsOptions));
 // database concetion
 connection();   
 
