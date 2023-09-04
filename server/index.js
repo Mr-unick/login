@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended:false}));
 // share data between backend and frontend servers
  
 const corsOptions = {
-    origin: ['http://localhost:3000', 'https://localhost:3000'],
+    origin: ['http://localhost:3000', 'https://localhost:5000'],
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true, 
     
