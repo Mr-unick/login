@@ -1,81 +1,60 @@
-import axios from 'axios';
-
 const API_URL = 'http://localhost:5000';
 
-const axiosInstance = axios.create({
-  baseURL: API_URL,
-  timeout: 10000,
+const fetchOptions = {
+  method: 'POST',
   headers: {
-    'Content-Type': 'application/json', // Corrected content-type
+    'Content-Type': 'application/json',
   },
-});
+  // You can add other options like credentials, headers, etc., here if needed
+};
 
-axiosInstance.interceptors.request.use(
-  function (config) {
-    return config;
-  },
-  function (error) {
-    return Promise.reject(error);
-  }
-);
-
-axiosInstance.interceptors.response.use(
-  function (response) {
-    // Stop global loader here
-    return processResponse(response);
-  },
-  function (error) {
-    // Stop global loader here
-    return Promise.reject(processError(error)); // Corrected function name
-  }
-);
-
-const processResponse = (response) => {
-  if (response?.status === 200) {
+const processResponse = async (response) => {
+  if (response.status === 200) {
     return {
       isSuccess: true,
-      data: response.data,
+      data: await response.json(),
     };
   } else {
+    const errorData = await response.json();
     return {
       isFailure: true,
-      status: response?.status,
-      msg: response?.data?.msg, // Corrected property name to access msg
-      code: response?.data?.code, // Corrected property name to access code
+      status: response.status,
+      msg: errorData.msg,
+      code: errorData.code,
     };
   }
 };
 
-const processError = async (error) => {
-  if (error.response) {
-    console.log('ERROR IN RESPONSE: ', error);
-    return {
-      isError: true,
-      code: error.response.status,
-    };
-  } else if (error.request) {
-    // The request was made but no response was received
-    console.log('ERROR IN REQUEST: ', error);
-    return {
-      isError: true,
-      code: '',
-    };
-  } else {
-    // Something happened in setting up the request that triggered an Error
-    console.log('ERROR IN REQUEST SETUP: ', error);
-    return {
-      isError: true,
-      code: '',
-    };
-  }
+const processError = (error) => {
+  console.error('ERROR: ', error);
+  return {
+    isError: true,
+    code: '',
+  };
 };
 
 // Signup API
 export const Signupuser = async (data) => {
-  return await axiosInstance.post('/signup', data);
+  try {
+    const response = await fetch(`${API_URL}/signup`, {
+      ...fetchOptions,
+      body: JSON.stringify(data),
+    });
+    return await processResponse(response);
+  } catch (error) {
+    return processError(error);
+  }
 };
 
 // Login API
 export const Loginuser = async (data) => {
-  return await axiosInstance.post('/login', data);
+  try {
+    const response = await fetch(`${API_URL}/login`, {
+      ...fetchOptions,
+      body: JSON.stringify(data),
+    });
+    return await processResponse(response);
+  } catch (error) {
+    return processError(error);
+  }
 };
