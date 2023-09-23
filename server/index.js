@@ -8,7 +8,9 @@ const app=express();
 
 //  body parser for post method
 app.use(bodyParser.json({extended:true}));
-
+app.get("/",(req,res)=>{
+    res.send("server is running")
+})
 //
 app.use(express.urlencoded({extended:false}));
 // share data between backend and frontend servers
