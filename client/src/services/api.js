@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 
-const API_URL = 'https://login-avwl9n9hc-mr-unick.vercel.app';
+const API_URL = 'http://localhost:5000';
 
 const axiosInstance = axios.create({
     baseURL: API_URL,
