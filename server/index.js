@@ -9,7 +9,7 @@ const app=express();
 //  body parser for post method
 app.use(bodyParser.json({extended:true}));
 app.get("/",(req,res)=>{
-    res.send("server is running")
+    res.render("server is running")
 })
 //
 app.use(express.urlencoded({extended:false}));
@@ -24,5 +24,5 @@ connection();
 app.use('/',router)  
 
 app.listen(5000,(req,res)=>{
-res.send("server is runnimg")
+
 })

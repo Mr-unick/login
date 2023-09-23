@@ -3,7 +3,7 @@
 import axios from 'axios';
 
 
-const API_URL = 'https://login-ser.vercel.app';
+const API_URL = '';
 
 const axiosInstance = axios.create({
     baseURL: API_URL,
@@ -76,10 +76,10 @@ const ProcessError = async (error) => {
 
 //singup API
 export const Signupuser=async(data)=>{
-        return await axiosInstance.post('/signup',data)
+        return await axiosInstance.post('https://login-ser.vercel.app/signup',data)
     }
 
 // Login APi
 export const Loginuser=async(data)=>{
-    return await axiosInstance.post('/login',data)
+    return await axiosInstance.post('https://login-ser.vercel.app/login',data)
 }
