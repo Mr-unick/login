@@ -76,10 +76,10 @@ const ProcessError = async (error) => {
 
 //singup API
 export const Signupuser=async(data)=>{
-        return await axiosInstance.post('http://login-ser.vercel.app/signup',data)
+        return await axiosInstance.post('https://login-ser.vercel.app/signup',data)
     }
 
 // Login APi
 export const Loginuser=async(data)=>{
-    return await axiosInstance.post('http://login-ser.vercel.app/login',data)
+    return await axiosInstance.post('https://login-ser.vercel.app/login',data)
 }
